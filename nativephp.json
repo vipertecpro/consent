@@ -1,0 +1,94 @@
+{
+    "name": "vipertecpro/consent",
+    "version": "1.0.0",
+    "description": "Ask for App Tracking Transparency on iOS and keep the user's privacy choices — analytics, ads, personalisation or your own purposes — in one cross-platform consent store, saved natively so other SDKs can read it, with events when anything changes.",
+    "namespace": "Consent",
+    "keywords": [
+        "consent",
+        "gdpr",
+        "privacy",
+        "att",
+        "app-tracking-transparency",
+        "tracking",
+        "analytics",
+        "ads",
+        "personalisation",
+        "cmp"
+    ],
+    "category": "privacy",
+    "license": "MIT",
+    "pricing": {
+        "type": "free"
+    },
+    "author": {
+        "name": "vipertecpro",
+        "email": "vipertecpro@gmail.com",
+        "url": "https://github.com/vipertecpro"
+    },
+    "homepage": "https://github.com/vipertecpro/consent",
+    "repository": "https://github.com/vipertecpro/consent",
+    "funding": [],
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "icon": "resources/icon.png",
+    "bridge_functions": [
+        {
+            "name": "Consent.TrackingStatus",
+            "android": "com.vipertecpro.plugins.consent.ConsentFunctions.TrackingStatus",
+            "ios": "ConsentFunctions.TrackingStatus",
+            "description": "Return the App Tracking Transparency status without prompting"
+        },
+        {
+            "name": "Consent.RequestTracking",
+            "android": "com.vipertecpro.plugins.consent.ConsentFunctions.RequestTracking",
+            "ios": "ConsentFunctions.RequestTracking",
+            "description": "Show the App Tracking Transparency prompt and report the answer via an event"
+        },
+        {
+            "name": "Consent.Read",
+            "android": "com.vipertecpro.plugins.consent.ConsentFunctions.Read",
+            "ios": "ConsentFunctions.Read",
+            "description": "Read the stored consent record from UserDefaults / SharedPreferences"
+        },
+        {
+            "name": "Consent.Write",
+            "android": "com.vipertecpro.plugins.consent.ConsentFunctions.Write",
+            "ios": "ConsentFunctions.Write",
+            "description": "Store the consent record natively so it survives restarts and other SDKs can read it"
+        }
+    ],
+    "android": {
+        "min_version": 29,
+        "permissions": [],
+        "repositories": [],
+        "dependencies": {
+            "implementation": []
+        },
+        "activities": [],
+        "services": [],
+        "receivers": [],
+        "providers": []
+    },
+    "ios": {
+        "min_version": "15.0",
+        "info_plist": {
+            "NSUserTrackingUsageDescription": "Your data is used to measure ads and show ones that are relevant to you."
+        },
+        "dependencies": {
+            "swift_packages": [],
+            "pods": []
+        }
+    },
+    "assets": {
+        "android": [],
+        "ios": []
+    },
+    "secrets": [],
+    "events": [
+        "Vipertecpro\\Consent\\Events\\TrackingPermissionResult"
+    ],
+    "service_provider": "Vipertecpro\\Consent\\ConsentServiceProvider",
+    "hooks": {}
+}
