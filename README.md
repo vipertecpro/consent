@@ -1,4 +1,4 @@
-# Consent — App Tracking Transparency and privacy choices for NativePHP Mobile
+# Consent for NativePHP — tracking permission and privacy choices
 
 Two things every app with analytics or ads needs, in one small plugin:
 
@@ -224,6 +224,6 @@ See the `CHANGELOG.md` file included with the package for the full version histo
 
 MIT — see the `LICENSE` file included with the package.
 
-vipertecpro is an independent developer. NativePHP, Laravel, Apple, Google, Firebase and other names are trademarks of their respective owners; this package is not affiliated with or endorsed by them.
+vipertecpro is an independent developer. NativePHP, Laravel, Apple, Google, Firebase and other names are trademarks of their respective owners; this package is not affiliated with or endorsed by them. iOS and Apple are trademarks of Apple Inc. Android, Google Play and Firebase are trademarks of Google LLC.
 
-Consent is a free plugin from vipertecpro.com, home of the paid plugins for NativePHP Mobile: Rich-Text Editor, Onboarding & Tours, Health Kit and Native Charts.
+Consent is a free plugin from vipertecpro.com, home of the paid plugins for NativePHP Mobile: Rich-Text Editor, Onboarding & Tours, Health Data and Native Charts.
