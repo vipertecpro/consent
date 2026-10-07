@@ -16,14 +16,14 @@ written Swift and Kotlin, **zero third-party libraries**, no Android permissions
 
 ## Features
 
-- 🛡️ **ATT prompt** — `requestTracking()` shows it only when the app is active (iOS silently answers "denied" otherwise) and only once
-- 🔎 **ATT status** — `trackingStatus()` without prompting: authorized, denied, restricted, notDetermined, notRequired
-- ✅ **Consent store** — `grant()`, `deny()`, `set()`, `grantAll()`, `denyAll()`, `reset()`, `granted()`, `choices()`
-- 🔁 **Re-ask on policy change** — bump `version` in `config/consent.php` and `needsPrompt()` turns true again
-- 🔒 **Required purposes** — mark "essential" as required and it can never be switched off
-- 📣 **Events** — `TrackingPermissionResult` from the native prompt, `ConsentUpdated` (a Laravel event) on every change
-- 📱 **Stored natively** — one JSON record under `vipertecpro.consent`, readable from Swift and Kotlin
-- 📱 **iOS + Android** behind one PHP API
+- **ATT prompt** — `requestTracking()` shows it only when the app is active (iOS silently answers "denied" otherwise) and only once
+- **ATT status** — `trackingStatus()` without prompting: authorized, denied, restricted, notDetermined, notRequired
+- **Consent store** — `grant()`, `deny()`, `set()`, `grantAll()`, `denyAll()`, `reset()`, `granted()`, `choices()`
+- **Re-ask on policy change** — bump `version` in `config/consent.php` and `needsPrompt()` turns true again
+- **Required purposes** — mark "essential" as required and it can never be switched off
+- **Events** — `TrackingPermissionResult` from the native prompt, `ConsentUpdated` (a Laravel event) on every change
+- **Stored natively** — one JSON record under `vipertecpro.consent`, readable from Swift and Kotlin
+- **iOS + Android** behind one PHP API
 
 ## Requirements
 
@@ -220,7 +220,7 @@ with the package for local setup, the project layout and how it works.
 
 See the `CHANGELOG.md` file included with the package for the full version history.
 
-## License
+## Licence
 
 MIT — see the `LICENSE` file included with the package.
 
