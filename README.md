@@ -183,6 +183,51 @@ Android  getSharedPreferences("vipertecpro_consent", MODE_PRIVATE).getString("re
 A JS bridge is shipped at `resources/js/consent.js` with
 `trackingStatus()`, `requestTracking()` and `record()`.
 
+## What you can build
+
+Consent is a building block: the iOS tracking prompt and a native store for
+people's privacy choices are done, and the product around them is yours. These
+ideas sit comfortably inside store policy as long as the app is honest about
+what it does with the answers. A choice in this plugin only records what the
+person said; switching analytics, ad or other SDKs on or off in response is
+your code, and a "no" must mean no.
+
+**Apps with ads or analytics**
+
+- **A first-run privacy screen.** Show the purposes from `config/consent.php`
+  with `Consent::purposes()`, offer Accept all, Reject all and per-purpose
+  switches with `grantAll()`, `denyAll()` and `set()`, and give "Reject all" the
+  same weight as "Accept all".
+- **Ad-supported games and utilities.** Ask for tracking with `requestTracking()`
+  at a moment that explains the benefit, then only enable personalised ads when
+  `trackingAllowed()` and `granted('ads')` are both true.
+- **Analytics gating.** Listen for `ConsentUpdated` and start or stop your
+  analytics SDK when the `analytics` purpose changes.
+
+**Regulated and sensitive apps**
+
+- **Health, finance and education apps.** Keep "essential" as a required purpose
+  and make everything else opt-in, with a settings screen where people can review
+  and change their choices at any time, using `choices()` and `reset()`.
+- **Apps for families and younger users.** Offer only the purposes you really
+  use and default every optional one to off; follow the stores' rules for
+  children's apps, which can be stricter than this plugin enforces.
+
+**Companies with several apps**
+
+- **A consistent privacy centre across your apps.** Reuse the same purposes,
+  wording and policy `version` everywhere, and bump the version when your policy
+  changes so everyone is asked again.
+- **Proof of consent for support teams.** The record has the answers, the
+  version and `updatedAt()`. Keeping a copy for audits or syncing choices across
+  a person's devices needs your own backend; the plugin stores the record on the
+  device only.
+
+This is a consent store, not an IAB-registered consent management platform and
+not legal advice. If an ad network requires a TCF string, use its own consent
+SDK. Describe your data use accurately in your privacy policy and in the store
+privacy forms.
+
 ## Limitations
 
 - **The ATT prompt appears once per install.** After that iOS answers with
