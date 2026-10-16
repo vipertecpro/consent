@@ -1,5 +1,7 @@
 # Consent for NativePHP — tracking permission and privacy choices
 
+![Latest version](https://img.shields.io/packagist/v/vipertecpro/consent) ![Tests](https://img.shields.io/github/actions/workflow/status/vipertecpro/consent/tests.yml?branch=main&label=tests) ![PHP](https://img.shields.io/packagist/dependency-v/vipertecpro/consent/php) ![NativePHP Mobile](https://img.shields.io/packagist/dependency-v/vipertecpro/consent/nativephp%2Fmobile) ![Platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20Android-informational) ![Licence](https://img.shields.io/packagist/l/vipertecpro/consent) ![Downloads](https://img.shields.io/packagist/dt/vipertecpro/consent)
+
 Two things every app with analytics or ads needs, in one small plugin:
 
 - the **App Tracking Transparency** prompt on iOS ("Allow *Your App* to track
